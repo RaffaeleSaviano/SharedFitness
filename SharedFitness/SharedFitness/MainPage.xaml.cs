@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SharedFitness.Model;
+using SharedFitness.Network.WebServers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,9 @@ namespace SharedFitness
         public MainPage()
         {
             InitializeComponent();
+
+
         }
+        
     }
 }

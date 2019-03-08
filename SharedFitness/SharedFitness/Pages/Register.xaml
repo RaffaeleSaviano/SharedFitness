@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedFitness.Pages.Register">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="Name" Margin="5, 50, 5, 10" Placeholder="Name"></Entry>
+            <Entry x:Name="Surname" Margin="5, 0, 5, 10" Placeholder="Surname"></Entry>
+            <Entry x:Name="Username" Margin="5, 0, 5, 10" Placeholder="Username"></Entry>
+            <Entry x:Name="Password" Margin="5, 0, 5, 10" Placeholder="Password" IsPassword="True"></Entry>
+            <Button x:Name="Submit" Margin="0, 5" Text="Sign up" Clicked="Submit_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

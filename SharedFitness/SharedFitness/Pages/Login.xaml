@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedFitness.Pages.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="Username" Margin="5, 50, 5, 10" Placeholder="Username"></Entry>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+                <Entry Grid.Row="0" Grid.Column="0" x:Name="Password" Margin="5, 0, 5, 10" Placeholder="Password" IsPassword="True"  ></Entry>
+                <ImageButton Grid.Row="0" Grid.Column="1" x:Name="Seepw" Source="https://cdn3.vectorstock.com/i/1000x1000/91/22/eye-icon-vector-20509122.jpg" Clicked="ChangePasswordView"></ImageButton>
+            </Grid>
+            <Button x:Name="Submit" Margin="0, 5" Text="Sign in" Clicked="Submit_Clicked"></Button>
+            <Label x:Name="Register" Text="Non hai ancora un account? registrati" HorizontalOptions="Center" TextColor="Blue"></Label>
+            <ActivityIndicator x:Name="LoadAI" IsRunning="False" IsVisible="False" IsEnabled="False" WidthRequest="100" HeightRequest="100"></ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
