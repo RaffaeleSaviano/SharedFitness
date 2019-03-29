@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedFitness.Pages.UserSettings">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="Oldpassword" Placeholder="Old Password"></Entry>
+            <Entry x:Name="Newpassword" Placeholder="New Passord"></Entry>
+            <Entry x:Name="Repeatpassword" Placeholder="Repeat Passord"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

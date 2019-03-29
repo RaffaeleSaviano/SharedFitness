@@ -1,4 +1,5 @@
 ﻿using SharedFitness.Pages;
+using SharedFitness.ViewModel;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,12 +9,15 @@ namespace SharedFitness
 {
     public partial class App : Application
     {
+        public SFapp MainSFapp { get; set; } = new SFapp();
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
         }
+
 
         protected override void OnStart()
         {

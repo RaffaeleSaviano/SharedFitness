@@ -45,8 +45,9 @@ namespace SharedFitness.Pages
             bool result = await SFWebServer.Main.Login(u);
             if (result)
             {
-                //((NavigationPage)Application.Current.MainPage).PushAsync(new MainPage());
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                u = (await SFWebServer.Main.Get<IEnumerable<User>>(Network.WebServers.SFResources.User, "Username", u.Username)).First();
+                ((App)Application.Current).MainSFapp.User = u;
+                Application.Current.MainPage = new MainPageCS();
             }
             else
             {
