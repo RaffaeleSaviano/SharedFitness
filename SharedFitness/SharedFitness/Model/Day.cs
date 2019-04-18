@@ -5,10 +5,10 @@ using System.Text;
 
 namespace SharedFitness.Model
 {
-    public class Day
+    public class Day: ObservableCollection<Exercise>
     {
         public string Muscle { get; set; }
         public int DayFrequency { get; set; }
-        public ObservableCollection<Exercise> Exercise { get; set; }
+        //public ObservableCollection<Exercise> Exercise { get; set; }
     }
 }

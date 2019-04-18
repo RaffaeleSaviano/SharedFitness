@@ -14,19 +14,24 @@ namespace SharedFitness.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SheetList : ContentPage
 	{
-        ICollection<Sheet> sheetList = ((App)Application.Current).MainSFapp.User.Sheet;
 
         public SheetList ()
 		{
 			InitializeComponent ();
-            SheetLV.ItemsSource = sheetList;
+            SheetLV.ItemsSource = SFapp.App.Sheets;
 		}
 
         int count = 0;
         private void Button_Clicked(object sender, EventArgs e)
         {
             count++;
-            sheetList.Add(new Sheet() { Date = count.ToString()});
+            SFapp.App.Sheets.Add(new Sheet() { Name = "Name"+count.ToString(), Date= count.ToString()+"/"+ count.ToString() + "/" + count.ToString()});
+        }
+
+        private void SheetLV_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Sheet selected = e.SelectedItem as Sheet;
+            ((NavigationPage)((MainPageCS)Application.Current.MainPage).Detail).PushAsync(new SheetView(selected));
         }
     }
 }

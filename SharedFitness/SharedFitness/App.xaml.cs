@@ -9,7 +9,6 @@ namespace SharedFitness
 {
     public partial class App : Application
     {
-        public SFapp MainSFapp { get; set; } = new SFapp();
 
         public App()
         {

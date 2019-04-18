@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedFitness.Pages.test">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="label" Text="Welcome to Xamarin.Forms!" Margin="30"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+            <Slider Value="{Binding Rotation, Mode=TwoWay}"
+                        BindingContext="{x:Reference label}" Maximum="360" Minimum="0"></Slider>
+            <Entry Placeholder="Welcome to Xamarin.Forms!"
+                   BindingContext="{x:Reference label}"
+                   Text="{Binding Text}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

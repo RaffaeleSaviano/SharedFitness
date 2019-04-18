@@ -4,11 +4,15 @@
              x:Class="SharedFitness.Pages.SheetList">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="SheetLV">
+            <ListView x:Name="SheetLV" RowHeight="70" ItemSelected="SheetLV_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{x:Binding Name}"></Label>
+                                    <Label Text="{x:Binding WeeklyFrequency, StringFormat='{0:d} times a week'}"></Label>
+                                </StackLayout>
                                 <Label Text="{x:Binding Date}"></Label>
                             </StackLayout>
                         </ViewCell>

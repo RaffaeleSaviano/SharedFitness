@@ -8,5 +8,6 @@ namespace SharedFitness.Model
     {
         public string Reps { get; set; }
         public string Sets { get; set; }
+        public string Description { get; set; }
     }
 }

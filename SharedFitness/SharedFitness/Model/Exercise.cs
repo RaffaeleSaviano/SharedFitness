@@ -10,6 +10,6 @@ namespace SharedFitness.Model
         public string Name { get; set; }
         public ObservableCollection<Set> Scheme { get; set; }
         public float Wait { get; set; }
-        public float Load { get; set; }
+        public float Loadw { get; set; }
     }
 }
