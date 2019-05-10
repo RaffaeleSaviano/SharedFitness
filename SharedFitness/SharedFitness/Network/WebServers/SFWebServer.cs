@@ -54,10 +54,13 @@ namespace SharedFitness.Network.WebServers
             {
                 String cookieName = "PHPSESSID=";
                 String s = hrr.Headers.Get("Set-Cookie");
-                String sessionId = s.Substring(s.IndexOf(cookieName));
-                sessionId = sessionId.Substring(0, sessionId.IndexOf(";") + 1);
+                if(s != null)
+                {
+                    String sessionId = s.Substring(s.IndexOf(cookieName));
+                    sessionId = sessionId.Substring(0, sessionId.IndexOf(";") + 1);
 
-                Headers.Add("Cookie", sessionId);
+                    Headers.Add("Cookie", sessionId);
+                }
                 return true;
             }
             else

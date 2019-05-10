@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SharedFitness.Pages.Login"
              xmlns:local="clr-namespace:XFormsUI;assembly=XFormsUI"            
-             xmlns:Common="clr-namespace:XFormsUI.Classes;assembly=XFormsUI">
+             xmlns:Common="clr-namespace:XFormsUI.Classes;assembly=XFormsUI"
+             BackgroundColor="Black"
+             >
     <ScrollView>
         <Grid Padding="20, 30, 20, 20" RowSpacing="20">
             <Grid.RowDefinitions>
@@ -14,7 +16,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Image Source="https://images.unsplash.com/photo-1518617840859-acd542e13a99?w=300" Grid.Row="0" Grid.Column="0" Grid.RowSpan="6"></Image>
+            <Image Source="https://hdqwalls.com/download/fitness-gym-girl-nb-1680x1100.jpg" Grid.Row="0" Grid.Column="0" Grid.RowSpan="6"></Image>
             <Label Text="Shared Fitness" FontSize="30" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" TextColor="White">
                 <Label.FontFamily>
                     <OnPlatform x:TypeArguments="x:String">
@@ -32,8 +34,8 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="https://raw.githubusercontent.com/supreettare/XFUI/master/XFormsUI/XFormsUI.Droid/Resources/drawable/iconUsername.png" HeightRequest="50" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="Username" Placeholder="Username" BackgroundColor="Transparent" HorizontalOptions="Fill" TextColor="White" Grid.Row="0" Grid.Column="1"/>
+                <Image Source="https://raw.githubusercontent.com/supreettare/XFUI/master/XFormsUI/XFormsUI.Droid/Resources/drawable/iconUsername.png" IsOpaque="True" HeightRequest="50" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="Username" Placeholder="Username" PlaceholderColor="White"  BackgroundColor="Transparent" HorizontalOptions="Fill" TextColor="White" Grid.Row="0" Grid.Column="1"/>
             </Grid>
             <BoxView HeightRequest="1" Grid.Row="3" HorizontalOptions="Fill" BackgroundColor="White" VerticalOptions="End"/>
 
@@ -47,7 +49,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="https://raw.githubusercontent.com/supreettare/XFUI/master/XFormsUI/XFormsUI.Droid/Resources/drawable/iconPassword.png" HeightRequest="50" VerticalOptions="Center" />
-                <Entry x:Name="Password" Placeholder="Password" BackgroundColor="Transparent" HorizontalOptions="Fill" TextColor="White" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="Password" Placeholder="Password" BackgroundColor="Transparent" PlaceholderColor="White" HorizontalOptions="Fill" TextColor="White" Grid.Row="0" Grid.Column="1" IsPassword="True"/>
             </Grid>
             <BoxView HeightRequest="1" Grid.Row="4" HorizontalOptions="Fill" BackgroundColor="White" VerticalOptions="End"/>
 

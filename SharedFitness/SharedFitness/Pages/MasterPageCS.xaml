@@ -12,6 +12,8 @@
                 <x:Array Type="{x:Type local:MasterPageItem}">
                     <local:MasterPageItem Title="Sheet List" IconSource="contacts.png" TargetType="{x:Type local:SheetList}" />
                     <local:MasterPageItem Title="User Settings" IconSource="todo.png" TargetType="{x:Type local:UserSettings}" />
+                    <local:MasterPageItem Title="Logout" IconSource="todo.png" TargetType="{x:Type local:Logout}" />
+
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

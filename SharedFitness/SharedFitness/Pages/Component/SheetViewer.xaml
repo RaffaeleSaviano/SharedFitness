@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SharedFitness.Pages.Component.SheetViewer">
+  <ContentView.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sheet Name"></Label>
+                <Entry Placeholder="Name" Text="{Binding Name}"></Entry>
+                <Button Text="Add Day" Clicked="AddDay"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Start Date: "></Label>
+                <DatePicker x:Name="DateSelect" Date="{Binding Date}">
+                </DatePicker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sheet Duration: "></Label>
+                <Entry Keyboard="Numeric" Placeholder="Weeks" Text="{Binding Lenght}"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Frequency: "></Label>
+                <Entry Keyboard="Numeric" Placeholder="" Text="{Binding WeeklyFrequency}"></Entry>
+            </StackLayout>
+            <ListView ItemsSource="{Binding}"></ListView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

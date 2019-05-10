@@ -15,6 +15,6 @@ namespace SharedFitness.Pages
 		public MasterPageCS ()
 		{
 			InitializeComponent ();
-		}
+        }
 	}
 }

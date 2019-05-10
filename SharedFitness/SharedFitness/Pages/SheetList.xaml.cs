@@ -24,8 +24,9 @@ namespace SharedFitness.Pages
         int count = 0;
         private void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
-            SFapp.App.Sheets.Add(new Sheet() { Name = "Name"+count.ToString(), Date= count.ToString()+"/"+ count.ToString() + "/" + count.ToString()});
+            //count++;
+            //SFapp.App.Sheets.Add(new Sheet() { Name = "Name"+count.ToString(), Date= count.ToString()+"/"+ count.ToString() + "/" + count.ToString()});
+            ((NavigationPage)((MasterDetailPage)Application.Current.MainPage).Detail).PushAsync(new InsertSheet());
         }
 
         private void SheetLV_ItemSelected(object sender, SelectedItemChangedEventArgs e)
